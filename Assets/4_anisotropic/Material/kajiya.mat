@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: kajiya
+  m_Shader: {fileID: 4800000, guid: b23760b66a6da7848b768de713767fd8, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: d2cb59003d0c61d4bb0361f25f834e3e, type: 3}
+        m_Scale: {x: 8.7, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ShadowFalloff: 1
+    - _WarpInt: 0.7
+    - _WarpPowInt: 166
+    - _dimiangaodu: 0.01
+    - _yinyingces: 1
+    m_Colors:
+    - _HighColor: {r: 0.8191816, g: 1, b: 0.6273585, a: 1}
+    - _MainColor: {r: 0.49483803, g: 0.754717, b: 0.49508017, a: 1}
+    - _ShadowColor: {r: 1, g: 1, b: 1, a: 1}
