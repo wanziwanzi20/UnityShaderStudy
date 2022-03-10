@@ -151,7 +151,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 1dedad6ec65e0a24e9cbc4c1cb3e9337,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.9994763
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1dedad6ec65e0a24e9cbc4c1cb3e9337,
         type: 3}
@@ -161,7 +161,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 1dedad6ec65e0a24e9cbc4c1cb3e9337,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.000012367962
+      value: 0.03235972
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1dedad6ec65e0a24e9cbc4c1cb3e9337,
         type: 3}
@@ -176,7 +176,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 1dedad6ec65e0a24e9cbc4c1cb3e9337,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 179.99901
+      value: 176.29102
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1dedad6ec65e0a24e9cbc4c1cb3e9337,
         type: 3}
@@ -187,11 +187,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e9add0dca5ff1814a8a53088e7c0372e, type: 2}
+      objectReference: {fileID: 2100000, guid: d5b5acf23035c8d4cb680685e69119b7, type: 2}
     - target: {fileID: -927199367670048503, guid: 1dedad6ec65e0a24e9cbc4c1cb3e9337,
         type: 3}
       propertyPath: m_Name
-      value: monkey_lambert
+      value: monkey_BlinnPhong
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dedad6ec65e0a24e9cbc4c1cb3e9337, type: 3}

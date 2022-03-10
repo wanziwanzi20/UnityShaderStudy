@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Phong
-  m_Shader: {fileID: 4800000, guid: f1b964e45717d1f409222db31f7ce6cc, type: 3}
+  m_Name: BlinnPhong
+  m_Shader: {fileID: 4800000, guid: e0b9d9b742e05544ab5e4a2bcb3a7538, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -21,6 +21,7 @@ Material:
     m_TexEnvs: []
     m_Floats:
     - PhongPow: 100
-    - _PhongPow: 24.8
+    - _PhongPow: 30.7
+    - _Pow: 90
     - _SpecularPower: 90
     m_Colors: []
