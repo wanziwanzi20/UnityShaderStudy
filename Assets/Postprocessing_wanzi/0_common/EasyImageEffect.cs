@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [ExecuteInEditMode()]   //可预览
-public class EasyImageEffect : MonoBehaviour
+public class EasyImageEffect : MonoBehaviour   //命名必须与c#文件名一致
 {
     public Material material;   //输入材质球
 
