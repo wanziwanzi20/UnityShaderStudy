@@ -481,6 +481,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 933109825cce51b43b9a4835b590bf4b, type: 2}
+  _Brightness: 1
+  _Saturation: 1
+  _Contrast: 1
+  _DarkInt: 1.5
+  _DarkNess: 5
+  _DarkPow: 5
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0

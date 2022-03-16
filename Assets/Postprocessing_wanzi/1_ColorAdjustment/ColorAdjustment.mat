@@ -26,8 +26,8 @@ Material:
     m_Floats:
     - _Brightness: 1
     - _Contrast: 1
-    - _DarkInt: 1.7
-    - _DarkNess: 2.23
-    - _DarkPow: 1
+    - _DarkInt: 1.5
+    - _DarkNess: 5
+    - _DarkPow: 5
     - _Saturation: 1
     m_Colors: []
