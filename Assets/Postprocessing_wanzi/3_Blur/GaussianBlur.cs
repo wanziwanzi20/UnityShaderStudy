@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [ExecuteInEditMode()]   //可预览
-public class BoxBlur : MonoBehaviour   //命名必须与c#文件名一致
+public class GaussianBlur : MonoBehaviour   //命名必须与c#文件名一致
 {
     public Material material;   //输入材质球
     [Range(1,15)]
@@ -13,8 +13,6 @@ public class BoxBlur : MonoBehaviour   //命名必须与c#文件名一致
     public int _Iteration = 4;        //迭代次数
     [Range(1,10)]
     public float _DownSample = 2.0f;  //降采样值
-    [Range(0,1)]
-    public int _SampleTap = 0;        //采样像素点模式
     //public int _BlurOffset = 1;     //迭代偏移量（已弃用）
 
     //初始化判断,脚本仅运行一次
@@ -43,8 +41,8 @@ public class BoxBlur : MonoBehaviour   //命名必须与c#文件名一致
 
         for ( int i = 0 ; i < _Iteration ; i++ )
         {
-            Graphics.Blit(RT1,RT2,material,_SampleTap);   
-            Graphics.Blit(RT2,RT1,material,_SampleTap); 
+            Graphics.Blit(RT1,RT2,material,0);   
+            Graphics.Blit(RT2,RT1,material,1); 
         }  
 
         Graphics.Blit(RT1,destination);   //x:输入纹理；y：输出纹理；z：调用材质球中的shader；w：调用shader中的第几个pass，默认为第一个（0）

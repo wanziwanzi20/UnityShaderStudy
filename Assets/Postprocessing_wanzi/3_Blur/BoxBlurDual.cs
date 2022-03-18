@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [ExecuteInEditMode()]   //可预览
-public class BoxBlur : MonoBehaviour   //命名必须与c#文件名一致
+public class BoxBlurDual : MonoBehaviour   //命名必须与c#文件名一致
 {
     public Material material;   //输入材质球
     [Range(1,15)]
@@ -41,9 +41,35 @@ public class BoxBlur : MonoBehaviour   //命名必须与c#文件名一致
         Graphics.Blit(soure,RT1);  //调用纹理
         material.SetVector("_BlurOffset",new Vector4(_BlurRadius/width1,_BlurRadius/height1,0,0));   //调用shader参数
 
+        //缩小采样
         for ( int i = 0 ; i < _Iteration ; i++ )
         {
-            Graphics.Blit(RT1,RT2,material,_SampleTap);   
+            RenderTexture.ReleaseTemporary(RT2);   //先释放之前生成的RT2
+            width1 = width1/2;
+            height1 = height1/2;
+            RT2 = RenderTexture.GetTemporary(width1,height1);   
+            Graphics.Blit(RT1,RT2,material,_SampleTap);  
+            
+            RenderTexture.ReleaseTemporary(RT1);   //先释放之前生成的RT1
+            width1 = width1/2;
+            height1 = height1/2;
+            RT1 = RenderTexture.GetTemporary(width1,height1);  
+            Graphics.Blit(RT2,RT1,material,_SampleTap); 
+        }  
+
+        //放大采样
+        for ( int i = 0 ; i < _Iteration ; i++ )
+        {
+            RenderTexture.ReleaseTemporary(RT2);   //先释放之前生成的RT2
+            width1 = width1 * 2;
+            height1 = height1 * 2;
+            RT2 = RenderTexture.GetTemporary(width1,height1);   
+            Graphics.Blit(RT1,RT2,material,_SampleTap);  
+            
+            RenderTexture.ReleaseTemporary(RT1);   //先释放之前生成的RT1
+            width1 = width1 * 2;
+            height1 = height1 * 2;
+            RT1 = RenderTexture.GetTemporary(width1,height1);  
             Graphics.Blit(RT2,RT1,material,_SampleTap); 
         }  
 
