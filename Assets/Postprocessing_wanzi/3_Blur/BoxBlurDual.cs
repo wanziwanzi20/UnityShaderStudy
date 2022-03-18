@@ -46,14 +46,14 @@ public class BoxBlurDual : MonoBehaviour   //命名必须与c#文件名一致
         {
             RenderTexture.ReleaseTemporary(RT2);   //先释放之前生成的RT2
             width1 = width1/2;
-            height1 = height1/2;
-            RT2 = RenderTexture.GetTemporary(width1,height1);   
+            height1 = height1/2;            
+            RT2 = RenderTexture.GetTemporary(width1,height1);   //降采样
             Graphics.Blit(RT1,RT2,material,_SampleTap);  
             
             RenderTexture.ReleaseTemporary(RT1);   //先释放之前生成的RT1
             width1 = width1/2;
             height1 = height1/2;
-            RT1 = RenderTexture.GetTemporary(width1,height1);  
+            RT1 = RenderTexture.GetTemporary(width1,height1);  //降采样
             Graphics.Blit(RT2,RT1,material,_SampleTap); 
         }  
 
@@ -63,13 +63,13 @@ public class BoxBlurDual : MonoBehaviour   //命名必须与c#文件名一致
             RenderTexture.ReleaseTemporary(RT2);   //先释放之前生成的RT2
             width1 = width1 * 2;
             height1 = height1 * 2;
-            RT2 = RenderTexture.GetTemporary(width1,height1);   
+            RT2 = RenderTexture.GetTemporary(width1,height1);   //升采样
             Graphics.Blit(RT1,RT2,material,_SampleTap);  
             
             RenderTexture.ReleaseTemporary(RT1);   //先释放之前生成的RT1
             width1 = width1 * 2;
             height1 = height1 * 2;
-            RT1 = RenderTexture.GetTemporary(width1,height1);  
+            RT1 = RenderTexture.GetTemporary(width1,height1);  //升采样
             Graphics.Blit(RT2,RT1,material,_SampleTap); 
         }  
 
