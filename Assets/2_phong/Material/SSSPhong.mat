@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BlinnPhong
-  m_Shader: {fileID: 4800000, guid: e0b9d9b742e05544ab5e4a2bcb3a7538, type: 3}
+  m_Name: SSSPhong
+  m_Shader: {fileID: 4800000, guid: 787d5fd4b4578fa4ab0dee356510792b, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -21,7 +21,13 @@ Material:
     m_TexEnvs: []
     m_Floats:
     - PhongPow: 100
-    - _PhongPow: 30.7
-    - _Pow: 60
+    - _BackInt: 0.414
+    - _PhongPow: 4.1
+    - _SSSInt: 0.5
+    - _SpecularInt: 1
     - _SpecularPower: 90
+    - _SpecularScale: 0
+    - _WorapValue: 0.8
+    - _sssOffset: 0.563
+    - _sssPow: 4.1
     m_Colors: []
