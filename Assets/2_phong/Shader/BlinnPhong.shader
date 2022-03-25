@@ -47,9 +47,13 @@
                 float3 lDir = _WorldSpaceLightPos0.xyz;         // 获取lDir
                 float3 vDir = normalize(_WorldSpaceCameraPos.xyz -i.posWS.xyz);
                 float3 hDir = normalize(lDir + vDir);
+
+                float ndotl = dot(nDir,lDir);
                 float ndoth = dot(hDir,nDir);
+                float lambert = max(ndotl,0);
                 float blinnphong = pow(max(ndoth,0),_Pow);
-                return blinnphong;  // 输出最终颜色
+                float LightModel = lambert + blinnphong;
+                return LightModel;  // 输出最终颜色
             }
             ENDCG
         }

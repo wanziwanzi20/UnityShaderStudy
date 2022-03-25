@@ -21,6 +21,6 @@ Material:
     m_TexEnvs: []
     m_Floats:
     - PhongPow: 100
-    - _PhongPow: 24.8
+    - _PhongPow: 61.9
     - _SpecularPower: 90
     m_Colors: []

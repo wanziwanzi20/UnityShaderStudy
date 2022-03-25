@@ -44,11 +44,16 @@
             // 输出结构>>>像素
             float4 frag(VertexOutput i) : COLOR {
                 float3 nDir = normalize(i.nDirWS);                         // 获取nDir！！必须要规格化！！
-                float3 lDir = -_WorldSpaceLightPos0.xyz;         // 获取lDir
+                float3 lDir = _WorldSpaceLightPos0.xyz;         // 获取lDir
                 float3 vDir = normalize(_WorldSpaceCameraPos.xyz -i.posWS.xyz);
-                float3 vrDir = normalize(reflect(vDir,nDir));
-                float phong = pow(dot(vrDir,lDir),_PhongPow);
-                return phong;  // 输出最终颜色
+                float3 vrDir = reflect(vDir,nDir);
+
+                float ndotl = dot(nDir,lDir);
+                float lambert = max(0.0,ndotl);
+                float vrdotr = dot(vrDir,-lDir);   //-lDir=rDir
+                float phong = pow(max(vrdotr,0),_PhongPow) ;
+                float LightingModel = lambert + phong;
+                return float4(LightingModel.xxx,1);  // 输出最终颜色
             }
             ENDCG
         }
