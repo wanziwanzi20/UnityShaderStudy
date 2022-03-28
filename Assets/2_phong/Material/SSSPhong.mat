@@ -21,13 +21,13 @@ Material:
     m_TexEnvs: []
     m_Floats:
     - PhongPow: 100
-    - _BackInt: 0.414
+    - _BackInt: 1
     - _PhongPow: 4.1
     - _SSSInt: 0.5
     - _SpecularInt: 1
     - _SpecularPower: 90
     - _SpecularScale: 0
-    - _WorapValue: 0.8
+    - _WorapValue: 1
     - _sssOffset: 0.563
-    - _sssPow: 4.1
+    - _sssPow: 3
     m_Colors: []
