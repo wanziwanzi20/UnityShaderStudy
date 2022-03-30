@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: glass
-  m_Shader: {fileID: 4800000, guid: 2fadfa17660349542aa267da660ca6ec, type: 3}
+  m_Name: glass_ASE
+  m_Shader: {fileID: 4800000, guid: b9b8cb2ebb69bf04fbc8227d88d2ba80, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,15 +19,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainMatCap:
+    - _TextureSample0:
         m_Texture: {fileID: 2800000, guid: e9560ccec81793849ae9fe5e801cc87e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _WarpMatCap:
+    - _TextureSample1:
         m_Texture: {fileID: 2800000, guid: 3dc5ecabd85ffed468d65f1148127220, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _WarpInt: 1.7
+    - _Float2: 1.7
+    - __dirty: 0
     m_Colors:
-    - _MainCol: {r: 0.6745098, g: 0.8980392, b: 1, a: 1}
+    - _Color0: {r: 0.6745283, g: 0.899681, b: 1, a: 1}
