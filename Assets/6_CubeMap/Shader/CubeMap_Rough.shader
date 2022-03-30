@@ -1,10 +1,11 @@
-﻿Shader "wanzi/CubeMap"
+﻿Shader "wanzi/CubeMap_Rough"
 {
     Properties
     {
         [normal]_NormalMap("法线贴图",2D) = "bump"{}
         _CubeMap("立方体贴图",Cube) = "white"{}
         _Rotate("y轴旋转数值",range(0,360)) = 0
+        _Rough("粗糙度",Range(0,1)) = 0.5
     }
     SubShader
     {
@@ -40,6 +41,7 @@
             float4 _CubeMap_HDR;   //确保HDR信息正确
             sampler2D _NormalMap;
             float _Rotate;
+            float _Rough;
 
             v2f vert (appdata v)
             {
@@ -68,7 +70,8 @@
                 float2 rDirRxz = mul(turn,rDirWS.xz);   //r向量xz平面旋转
                 float3 rDirR = float3(rDirRxz.x , rDirWS.y , rDirRxz.y);
 
-                float4 CubeMapcol = texCUBE(_CubeMap,-rDirR);
+                float MipLevel = _Rough * 9;
+                float4 CubeMapcol = texCUBElod(_CubeMap,float4(-rDirR,MipLevel));
                 float3 MainRGB = DecodeHDR(CubeMapcol,_CubeMap_HDR);   //确保HDR信息正确
 
                 return float4(MainRGB,1);
