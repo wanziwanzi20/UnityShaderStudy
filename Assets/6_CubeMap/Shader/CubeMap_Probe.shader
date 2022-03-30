@@ -65,7 +65,7 @@
                 float2 rDirRxz = mul(turn,rDirWS.xz);   //r向量xz平面旋转
                 float3 rDirR = float3(rDirRxz.x , rDirWS.y , rDirRxz.y);*/
 
-                float4 CubeMapcol = UNITY_SAMPLE_TEXCUBE(unity_SpecCube0,-rDirWS);  //获取反射探测器捕捉的图像
+                float4 CubeMapcol = UNITY_SAMPLE_TEXCUBE(unity_SpecCube0,-rDirWS);  //获取反射探测器捕捉的图像 //-rDirR = vrDir
                 float3 MainRGB = DecodeHDR(CubeMapcol,unity_SpecCube0_HDR);   //确保HDR信息正确
 
                 return float4(MainRGB,1);

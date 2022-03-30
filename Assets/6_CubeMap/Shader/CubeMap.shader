@@ -68,7 +68,7 @@
                 float2 rDirRxz = mul(turn,rDirWS.xz);   //r向量xz平面旋转
                 float3 rDirR = float3(rDirRxz.x , rDirWS.y , rDirRxz.y);
 
-                float4 CubeMapcol = texCUBE(_CubeMap,-rDirR);
+                float4 CubeMapcol = texCUBE(_CubeMap,-rDirR);   //-rDirR = vrDir
                 float3 MainRGB = DecodeHDR(CubeMapcol,_CubeMap_HDR);   //确保HDR信息正确
 
                 return float4(MainRGB,1);

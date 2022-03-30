@@ -71,7 +71,7 @@
                 float3 rDirR = float3(rDirRxz.x , rDirWS.y , rDirRxz.y);
 
                 float MipLevel = _Rough * 9;
-                float4 CubeMapcol = texCUBElod(_CubeMap,float4(-rDirR,MipLevel));
+                float4 CubeMapcol = texCUBElod(_CubeMap,float4(-rDirR,MipLevel));   //-rDirR = vrDir
                 float3 MainRGB = DecodeHDR(CubeMapcol,_CubeMap_HDR);   //确保HDR信息正确
 
                 return float4(MainRGB,1);
