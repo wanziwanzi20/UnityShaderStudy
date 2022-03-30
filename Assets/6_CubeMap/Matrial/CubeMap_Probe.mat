@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OrenNayar
-  m_Shader: {fileID: 4800000, guid: 3766658b959159d4e89e86be5b332dbb, type: 3}
+  m_Name: CubeMap_Probe
+  m_Shader: {fileID: 4800000, guid: b6289ba08061c11498b3bc0120d60058, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,15 +19,18 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _RougTex:
+    - _CubeMap:
+        m_Texture: {fileID: 8900000, guid: be4e4e464e434254ea04ef77750acf88, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _RoughTex:
+    - _NormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Roughness: 0.6
-    m_Colors:
-    - _MianCol: {r: 1, g: 0, b: 0, a: 1}
+    - _Rotate: 0
+    m_Colors: []
