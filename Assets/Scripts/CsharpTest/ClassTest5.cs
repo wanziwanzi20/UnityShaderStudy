@@ -12,7 +12,7 @@ public class ClassTest5 : MonoBehaviour
     {
         public string code;   //public：被公开    protected:可被继承不被外部访问
         public int ago;
-        public Gender gender;
+        //public Gender gender;
 
     }
     interface ITell

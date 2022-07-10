@@ -34,6 +34,8 @@ public class ClassTest2 : MonoBehaviour
     void Start()
     {
         xx1.code = "游乐";
+        xx1.gender = Gender.男;
+        xx1.ago = 13;
         xx1.TellName();
     }
 }

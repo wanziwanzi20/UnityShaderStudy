@@ -12,7 +12,7 @@ public class ClassTest4 : MonoBehaviour
     {
         public string code;   //public：被公开    protected:可被继承不被外部访问
         public int ago;
-        public Gender gender;
+        //public Gender gender;
 
         //abstract：加在方法前面为抽象方法，不能私有；除非子类为抽象类，否则必须被重写
         public abstract void TellName();

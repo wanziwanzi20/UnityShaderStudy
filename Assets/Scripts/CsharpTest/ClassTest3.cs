@@ -11,7 +11,7 @@ public class ClassTest3 : MonoBehaviour
     {
         public string code;   //public：被公开    protected:可被继承不被外部访问
         public int ago;
-        public Gender gender;
+        //public Gender gender;
 
         public virtual void TellName()
         {
