@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RTest : MonoBehaviour
 {
-    float speed = 360f;
+    public float speed = 360f;
     float upSpeed = 1;
     Vector2 startPos;
     Vector2 endPos;
