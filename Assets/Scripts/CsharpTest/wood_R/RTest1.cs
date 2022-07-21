@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RTest : MonoBehaviour
+public class RTest1 : MonoBehaviour
 {
     public float speed = 360f;
     float upSpeed = 1;
     Vector2 startPos;
     Vector2 endPos;
     Vector3 mouseDir;
+    Vector3 testQ;
+    //Vector3 starQ;
     void Start()
     {
     }
@@ -29,7 +31,7 @@ public class RTest : MonoBehaviour
             //关联鼠标滑动速度;手感优化
             if(mouseDir.magnitude > 20f)
             {
-            upSpeed += mouseDir.magnitude * 0.1f;
+            upSpeed += mouseDir.magnitude * 0.05f;
             //print(upSpeed);
             }
             else
@@ -43,7 +45,8 @@ public class RTest : MonoBehaviour
             upSpeed = 1;
             mouseDir = Vector3.zero;
         }
-        this.transform.Rotate(Vector3.Normalize(mouseDir) * speed * upSpeed * Time.deltaTime,Space.World);
+        testQ = Vector3.Normalize(mouseDir) * speed * upSpeed;
+        this.transform.Rotate(testQ * Time.deltaTime,Space.World);
     }
 }
 

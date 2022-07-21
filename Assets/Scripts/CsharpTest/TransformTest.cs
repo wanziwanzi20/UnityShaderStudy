@@ -16,6 +16,11 @@ public class TransformTest : MonoBehaviour
         print(transform.localEulerAngles);
         print(transform.localScale);
 
+        //四元数表示旋转
+        print(transform.rotation);  //世界空间
+        print(transform.localRotation);  //局部空间
+
+
         //Vector3.xxx表示此方向的标准向量，Vector3.forward表示(0,0,1)
         print("1" + Vector3.forward + Vector3.back + Vector3.right + Vector3.left);
         //给定物体位置

@@ -38,7 +38,7 @@ public class BoxBlur : MonoBehaviour   //命名必须与c#文件名一致
         RenderTexture RT1 = RenderTexture.GetTemporary(width1,height1);   //创建纹理1
         RenderTexture RT2 = RenderTexture.GetTemporary(width1,height1);   //创建纹理2
 
-        Graphics.Blit(soure,RT1);  //调用纹理
+        Graphics.Blit(soure,RT1);  //x:输入纹理；y：输出纹理；z：调用材质球中的shader；w：调用shader中的第几个pass，默认为第一个（0）
         material.SetVector("_BlurOffset",new Vector4(_BlurRadius/width1,_BlurRadius/height1,0,0));   //调用shader参数
 
         for ( int i = 0 ; i < _Iteration ; i++ )
