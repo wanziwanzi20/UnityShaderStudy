@@ -103,7 +103,8 @@
                 float3 tDirWS = normalize(mul(unity_ObjectToWorld, float4(v.tangent.xyz, 0.0)).xyz); // 切线方向 OS>WS
                 float3 bDirWS = normalize(cross(nDirWS, tDirWS) * v.tangent.w);  // 副切线方向
                 float3x3 TBN = float3x3(tDirWS,bDirWS,nDirWS);
-                v.color.rgb = v.color.rgb * 0.5 + 0.5;
+                //v.color.rgb = v.color.rgb * 0.5 + 0.5;
+                v.color.rgb /= 255;
                 float3 moveWS = normalize(mul(o.color.rgb, TBN)); 
 
                 //float3 nDirWS = UnityObjectToWorldNormal(v.normal);  // 法线方向 OS>WS  //else备份

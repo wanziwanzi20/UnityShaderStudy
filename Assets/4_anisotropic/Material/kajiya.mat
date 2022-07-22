@@ -25,8 +25,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _ShadowFalloff: 1
-    - _WarpInt: 1
-    - _WarpPowInt: 200
+    - _WarpInt: 0.33
+    - _WarpPowInt: 35
     - _dimiangaodu: 0.01
     - _yinyingces: 1
     m_Colors:
