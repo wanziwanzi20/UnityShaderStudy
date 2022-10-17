@@ -30,6 +30,6 @@ Material:
     - _dimiangaodu: 0.01
     - _yinyingces: 1
     m_Colors:
-    - _HighColor: {r: 0.8191816, g: 1, b: 0.6273585, a: 1}
+    - _HighColor: {r: 0.09681663, g: 0.1509434, b: 0.039159846, a: 1}
     - _MainColor: {r: 0.49483803, g: 0.754717, b: 0.49508017, a: 1}
     - _ShadowColor: {r: 1, g: 1, b: 1, a: 1}
